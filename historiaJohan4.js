@@ -1,9 +1,9 @@
 /* A) Cofla ya está terminando el primer semestre del primer ciclo, la tarea que le debe realizar es mucho mas avanzada de la que tenia antes, además de suma, resta, multiplicación y división ahora también necesitará calcular, raices cuadradas y cúbicas.
 
 CREAR SOLUCIONES:
-perfeccionar calculadora para poder implementar las nuevas funciones */
+perfeccionar calculadora para poder implementar las nuevas funciones 
 
-/* class Calculadora {
+ class Calculadora {
     constructor() { 
     }
 sumar = (numero1, numero2) => {
@@ -87,7 +87,7 @@ CREAR SOLUCIONES:
 *"profesor asignado"
 *el nombre de todos los alumnos
 - Crear función que nos diga en cuantas clases está cofla.
-- Nombrar las clases en las que está y los profesores de cada una.*/
+- Nombrar las clases en las que está y los profesores de cada una.
 
 const obtenerInformacion = (materia) =>{
     materias = {
@@ -135,4 +135,89 @@ mostrarInformacion("Matematicas");
 mostrarInformacion("Programacion");
 mostrarInformacion("Sociales");
 
-document.write(cantidadDeClases("adrian"));
+document.write(cantidadDeClases("adrian")); */
+
+/* c) Cofla ya vió las 12 materias y se decidió en cual se va a inscribir asi que en tres días lo hará, el problema es que se rompió el sistema de inscripciones.
+
+CREAR SOLUCIONES:
+Crear una función para preguntarle a cofla en que materia se quiere inscribir.
+Si ya hay 20 alumnos anotados en la materia negarle la inscripción.
+Si hay menos de 20 alumnos inscribir a cofla y añadirlo a la lista de alumnos.
+
+let materias = {
+    Matematicas: ["Doble j", "adrian", "margarita", "evencio"],
+    Programacion: ["Johan", "adrian", "margarita", "evencio"],
+    Español: ["Gallardo", "adrian", "saudy", "evencio", "roberto"],
+    Sociales: ["Joseito", "adrian", "margarita", "patricio"]
+}
+
+const inscribir = (alumno, materia) => {
+    personas = materias[materia];
+    if (personas.length >= 21) {
+        document.write(`Lo siento <b>${alumno}</b>, las clases de <b>${materia}</b> ya estan llenas. <br>`);
+    }else {
+        personas.push(alumno);
+        if (materia == "Programacion") {
+            materias = {
+                Matematicas: ['Matematicas'],
+                Programacion: personas,
+                Español: ['Español'],
+                Sociales:['Sociales']
+            }
+        }else if (materia == "Matematicas") {
+            materias = {
+                Matematicas: personas,
+                Programacion: ['Programacion'],
+                Español: ['Español'],
+                Sociales:['Sociales']
+            }
+        }else if (materia == "Español") {
+            materias = {
+                Matematicas: ['Matematicas'],
+                Programacion: ['Programacion'],
+                Español: personas,
+                Sociales:['Sociales']
+            }
+        }else if (materia == "Sociales") {
+            materias = {
+                Matematicas: ['Matematicas'],
+                Programacion: ['Programacion'],
+                Español: ['Español'],
+                Sociales: personas
+            }
+        }
+        
+        document.write(`¡Felicidades <b>${alumno}</b>! te has inscrito a <b>${materia}</b> correctamente. <br> `)
+    }
+}
+
+document.write(materias['Matematicas'] + "<br><br>");
+
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+inscribir("zulma","Matematicas");
+inscribir("fabian","Matematicas");
+inscribir("erick","Matematicas");
+inscribir("beatriz","Matematicas");
+
+
+
+document.write("<br>" + materias['Matematicas']); */

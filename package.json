@@ -4,6 +4,6 @@
   },
   
   "scripts": {
-    "start": "nodemon historiaJohan.js"
+    "start": "nodemon consola.js"
   }
 }
